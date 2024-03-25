@@ -38,3 +38,5 @@ class ProductDetailViewTests(TestCase):
         response = self.client.get(reverse('store:product_detail', args=[self.product.id]))
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'Python Book')
+        
+        'django-insecure-s^morc=1edogu&_8-e)jl^9#z2tk!0p4_rp(r)g=g=$dlf*(84'
