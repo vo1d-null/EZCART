@@ -11,9 +11,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-s^morc=1edogu&_8-e)jl^9#z2tk!0p4_rp(r)g=g=$dlf*(84'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+]
 
 # Application definition
 INSTALLED_APPS = [
@@ -24,6 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
+    'django_bootstrap5',
+    'payments',
     'accounts',
     'cart',
     'orders',
@@ -57,7 +62,6 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
             ],
              'builtins': [
-                'bootstrap5.templatetags.bootstrap5',
             ],
         },
     },
@@ -117,6 +121,9 @@ MEDIA_URL = '/media/'
 # Search Engine Optimization
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = True
+
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
 # Sitemaps
 SITE_ID = 1
