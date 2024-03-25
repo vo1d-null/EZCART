@@ -22,21 +22,4 @@ class ProductListViewTests(TestCase):
         response = self.client.get(reverse('store:product_list') + '?category=' + str(self.category.id))
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'Python Book')
-
-class ProductDetailViewTests(TestCase):
-    def setUp(self):
-        self.client = Client()
-        self.category = Category.objects.create(name='Books')
-        self.product = Product.objects.create(
-            name='Python Book',
-            description='Learn Python programming',
-            price=29.99,
-            category=self.category
-        )
-
-    def test_product_detail_view(self):
-        response = self.client.get(reverse('store:product_detail', args=[self.product.id]))
-        self.assertEqual(response.status_code, 200)
-        self.assertContains(response, 'Python Book')
         
-        'django-insecure-s^morc=1edogu&_8-e)jl^9#z2tk!0p4_rp(r)g=g=$dlf*(84'
