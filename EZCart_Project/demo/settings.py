@@ -116,5 +116,3 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 STRIPE_PUBLIC_KEY = 'pk_test_lX3r6OMjOU2yzFsNSHq6belT00EY82kZmH'
 STRIPE_SECRET_KEY = 'sk_test_tn0CTDaIJHUJyAqhsf39cfsC00LNjsqDnb'
-
-'django-insecure-m0hq0!xxbk#xzfomf$^m8@#v&07*&!*04+fvacwk(how+2)t-v'
