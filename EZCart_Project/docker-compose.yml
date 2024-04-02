@@ -1,0 +1,9 @@
+version : '3.8'
+
+services:
+  web:
+    image: nginx
+    ports:
+      - "81:80" # 81 on local machine 80 on container
+    volumes:
+      - './nginx/nginx.conf:/etc/nginx/nginx.conf'
