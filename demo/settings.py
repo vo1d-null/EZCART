@@ -6,7 +6,10 @@ DEBUG = True
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECRET_KEY = '-05sgp9!deq=q1nltm@^^2cc+v29i(tyybv3v2t77qi66czazj' prod
 SECRET_KEY = 'django-insecure-m0hq0!xxbk#xzfomf$^m8@#v&07*&!*04+fvacwk(how+2)t-v'
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'ezcart.azurewebsites.net',
+    '51.116.145.35',
+                 ]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
