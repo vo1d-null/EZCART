@@ -69,9 +69,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('POSTGRES_DB'),
-        'USER': os.getenv('POSTGRES_USER'),
-        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'EHdSviVASfkaXSAzsDDCgonsWifYXzRg',
         'HOST': os.getenv('RAILWAY_TCP_PROXY_DOMAIN'),
         'PORT': os.getenv('RAILWAY_TCP_PROXY_PORT'),
     }
