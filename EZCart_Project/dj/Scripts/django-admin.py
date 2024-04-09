@@ -1,4 +1,4 @@
-#!C:\Users\vo1d\Desktop\Repos\EZCART\EZCart_project\dj\Scripts\python.exe
+#!C:\Users\vo1d\Desktop\Repos\djangoshop\Django-Ecommerce\dj\Scripts\python.exe
 from django.core import management
 
 if __name__ == "__main__":

@@ -9,8 +9,8 @@ from django.shortcuts import redirect
 from django.utils import timezone
 from .forms import CheckoutForm, CouponForm, RefundForm
 from .models import Item, OrderItem, Order, BillingAddress, Payment, Coupon, Refund, Category
-from django.http import HttpResponseRedirect, request
-from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.shortcuts import render_to_response
 
 # Create your views here.
 import random
