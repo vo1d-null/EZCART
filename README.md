@@ -14,7 +14,7 @@
 
 `python manage.py migrate`
 
-#If that does not work delete dj folder and try :
+# If that does not work delete dj folder and try :
 
 `python -m venv env`
 
