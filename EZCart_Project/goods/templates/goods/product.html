@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block css %} 
+<link rel="stylesheet" href="{% static 'css/product_style.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<section class="main_section">
+    <div class="container">
+        <a href="{{ request.META.HTTP_REFERER }}" class="back-button"><span class="material-icons back-button_icon">arrow_back_ios</span>Back to the list of sneakers</a>
+        <div class="product__wrap">
+            <div class="product__images__wrap">
+                <img class="product__image_main"src="{{ product.image.url }}" alt="">
+                
+                <img class="product__image" src="{{ product.productshots.image1.url }}" alt="">
+                <img class="product__image" src="{{ product.productshots.image2.url }}" alt="">
+                <img class="product__image" src="{{ product.productshots.image3.url }}" alt="">
+                <img class="product__image" src="{{ product.productshots.image4.url }}" alt="">
+            </div>
+            <div class="product__info__wrap">
+                <h2 class="product__info__title">{{ product.name }}</h2>
+                <p class="product__info__article">Article: {{ product.article }}</p>
+                {% if product.productitem_set.all %}
+                <div class="product__info__price__wrap">
+                    {% if product.discount %}
+                    <p class="product__info__price product__info__price_new">$ {{ product.sell_price }}</p>
+                    <p class="product__info__price_old">$ {{ product.price }}</p>
+                    {% else %}
+                    <p class="product__info__price">$ {{ product.price }}</p>
+                    {% endif %}
+                </div>
+
+                <form method="post" action="{% url 'cart_add' %}">
+                    {% csrf_token %}
+                    <div class="product__info__size__wrap">
+                        <label class="product__info__size__title" for="sizes">Choose a size:</label>
+                        <select name="size" class="custom-select" id="sizes">
+                            {% for item in product.productitem_set.all %}
+                            <option value="{{ item.size }}">{{ item.size }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <button type="submit" class="product__info__add-button ajax-add" data-link="{% url 'cart_add' %}" data-product-id="{{ product.id }}">Add to cart</button>
+                </form>
+                {% else %}
+                <p class="sold-out">Sold Out</p>
+                {% endif %}
+
+                <div class="product__info__description__wrap">
+                    <p class="product__info__description__title">Description:</p>
+                    <p class="product__info__description__text">{{ product.description|linebreaksbr }}</p>    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %} 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+<link rel="stylesheet" href="{% static 'css/home_style.css' %}">
+<link rel="stylesheet" href="{% static 'css/catalog_style.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <section class="main__section">
+        <div class="container">
+            
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide">
+                        <div class="swiper-content">
+                            <p class="swiper__title">The choice is yours</p>
+                            <p class="swiper__subtitle">Step into comfort</p>
+                            <a href="#" class="swiper__link">Choose sneakers</a>
+                        </div>
+                        <img src="{% static 'img/slides/first.jpg' %}" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-content">
+                            <p class="swiper__title">The choice is yours</p>
+                            <p class="swiper__subtitle">Step into comfort</p>
+                            <a href="#" class="swiper__link">Choose sneakers</a>
+                        </div>
+                        <img src="{% static 'img/slides/second.webp' %}" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-content">
+                            <p class="swiper__title">The choice is yours</p>
+                            <p class="swiper__subtitle">Step into comfort</p>
+                            <a href="#" class="swiper__link">Choose sneakers</a>
+                        </div>
+                        <img src="{% static 'img/slides/third.jpg' %}" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-content">
+                            <p class="swiper__title">The choice is yours</p>
+                            <p class="swiper__subtitle">Step into comfort</p>
+                            <a href="#" class="swiper__link">Choose sneakers</a>
+                        </div>
+                        <img src="{% static 'img/slides/four.jpg' %}" alt="">
+                    </div>
+                </div>
+                
+
+                <div class="swiper-pagination"></div>
+            
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            
+            <div class="choice">
+                <div class="choice__wrap">
+                    <a href="{% url 'categories' 'men' %}" class="choice__item">
+                        <img src="{% static 'img/main/man.jpg' %}" alt="">
+                        <span class="choice__text">Men</span>
+                    </a>
+                    <a href="{% url 'categories' 'women' %}" class="choice__item">
+                        <img src="{% static 'img/main/woman.jpg' %}" alt="">
+                        <span class="choice__text">Women</span>
+                    </a>
+                    <a href="{% url 'categories' 'kids' %}" class="choice__item">
+                        <img src="{% static 'img/main/kid.jpg' %}" alt="">
+                        <span class="choice__text">Kids</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="fresh__wrap">
+                <h2 class="main__title">Fresh Out Sneakers</h2>
+                <div class="owl-carousel owl-theme">
+                    {% for product in products %}
+                    <div class="catalog__card">
+                        <a href="{{ product.get_absolute_url }}" class="catalog__card__link">
+                            <img src="{{ product.image.url }}" alt="#" class="catalog__card__img">
+                        </a>
+                        <div class="catalog__card__info">
+                            <a href="{{ product.get_absolute_url }}" class="catalog__card__name">{{ product.name }}</a>
+                            <div class="catalog__card__price__wrap">
+                                {% if product.discount %}
+                                <p class="catalog__card__price_new">${{ product.sell_price }}</p>
+                                <p class="catalog__card__price_old">${{ product.price }}</p>
+                                <small>-{{ product.discount }}%</small>
+                                {% else %}
+                                <p class="catalog__card__price">${{ product.price }}</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block script %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" 
+integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" 
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel(
+            {
+                loop:true,
+                autoplay: 5000,
+                margin:10,
+                navigation : false,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:3
+                    },
+                    1000:{
+                        items:5
+                    }
+                }
+            }
+        );
+        });
+</script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+
+        loop: true,
+      
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      
+      });
+</script>
+{% endblock %}
