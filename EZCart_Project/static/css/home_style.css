@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 /* SWIPER */
 
 .swiper {
@@ -15,15 +8,9 @@
 }
 
 .swiper-slide {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .swiper-button-next,
@@ -37,8 +24,7 @@
 
 .swiper-slide img {
     max-height: 410px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     z-index: 0;
     border-radius: 0 3px 3px 0;
 }

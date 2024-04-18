@@ -1,132 +1,18 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 
 
 .product__wrap {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	gap: 40px;
 	padding-top: 30px;
 }
 
 .product__images__wrap {
-	display: -ms-grid;
 	display: grid;
-	-webkit-box-flex: 0;
-	    -ms-flex: 0 0 60%;
-	        flex: 0 0 60%;
+	flex: 0 0 60%;
 	gap: 10px;
-	-ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr;
 	grid-template-columns: repeat(5, 1fr);
-	-ms-grid-rows: 1fr 10px 1fr 10px 1fr 10px 1fr;
 	grid-template-rows: repeat(4, 1fr);
 	max-height: 678px;
-}
-
-.product__images__wrap > *:nth-child(1) {
-	-ms-grid-row: 1;
-	-ms-grid-column: 1;
-}
-
-.product__images__wrap > *:nth-child(2) {
-	-ms-grid-row: 1;
-	-ms-grid-column: 3;
-}
-
-.product__images__wrap > *:nth-child(3) {
-	-ms-grid-row: 1;
-	-ms-grid-column: 5;
-}
-
-.product__images__wrap > *:nth-child(4) {
-	-ms-grid-row: 1;
-	-ms-grid-column: 7;
-}
-
-.product__images__wrap > *:nth-child(5) {
-	-ms-grid-row: 1;
-	-ms-grid-column: 9;
-}
-
-.product__images__wrap > *:nth-child(6) {
-	-ms-grid-row: 3;
-	-ms-grid-column: 1;
-}
-
-.product__images__wrap > *:nth-child(7) {
-	-ms-grid-row: 3;
-	-ms-grid-column: 3;
-}
-
-.product__images__wrap > *:nth-child(8) {
-	-ms-grid-row: 3;
-	-ms-grid-column: 5;
-}
-
-.product__images__wrap > *:nth-child(9) {
-	-ms-grid-row: 3;
-	-ms-grid-column: 7;
-}
-
-.product__images__wrap > *:nth-child(10) {
-	-ms-grid-row: 3;
-	-ms-grid-column: 9;
-}
-
-.product__images__wrap > *:nth-child(11) {
-	-ms-grid-row: 5;
-	-ms-grid-column: 1;
-}
-
-.product__images__wrap > *:nth-child(12) {
-	-ms-grid-row: 5;
-	-ms-grid-column: 3;
-}
-
-.product__images__wrap > *:nth-child(13) {
-	-ms-grid-row: 5;
-	-ms-grid-column: 5;
-}
-
-.product__images__wrap > *:nth-child(14) {
-	-ms-grid-row: 5;
-	-ms-grid-column: 7;
-}
-
-.product__images__wrap > *:nth-child(15) {
-	-ms-grid-row: 5;
-	-ms-grid-column: 9;
-}
-
-.product__images__wrap > *:nth-child(16) {
-	-ms-grid-row: 7;
-	-ms-grid-column: 1;
-}
-
-.product__images__wrap > *:nth-child(17) {
-	-ms-grid-row: 7;
-	-ms-grid-column: 3;
-}
-
-.product__images__wrap > *:nth-child(18) {
-	-ms-grid-row: 7;
-	-ms-grid-column: 5;
-}
-
-.product__images__wrap > *:nth-child(19) {
-	-ms-grid-row: 7;
-	-ms-grid-column: 7;
-}
-
-.product__images__wrap > *:nth-child(20) {
-	-ms-grid-row: 7;
-	-ms-grid-column: 9;
 }
 
 
@@ -134,17 +20,12 @@
 	width: 100%;
 	border-radius: 5px;
     height: auto;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
 }
 
 .product__image_main {
 	border-radius: 5px;
-	-ms-grid-column: 2;
-	-ms-grid-column-span: 4;
 	grid-column: 2/6;
-	-ms-grid-row: 1;
-	-ms-grid-row-span: 4;
 	grid-row: 1/5;
 }
 
@@ -162,8 +43,6 @@
 }
 
 .product__info__price__wrap {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	gap: 20px;
 	font-size: 22px;
@@ -189,9 +68,7 @@
 }
 
 .product__info__size__list {
-	display: -ms-grid;
 	display: grid;
-	-ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr;
 	grid-template-columns: repeat(5, 1fr);
 	gap: 10px;
 }
@@ -238,8 +115,7 @@
 
 select {
 	-webkit-appearance: none;
-	-moz-appearance: none;
-	     appearance: none;
+	appearance: none;
 	width: 50%;
 	font-size: 1.15rem;
 	padding: 10px 0 ;
@@ -274,12 +150,8 @@ select {
 }
 
 .product__info__size__wrap {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
+	align-items: center;
 }
 
 .sold-out {
