@@ -1,11 +1,6 @@
 {% load static %}
 {% load cart_tag %}
-{% load goods_tags %}
 
-{% get_user_carts request as carts_qty %}
-{% get_categories 'men' as men_cats %}
-{% get_categories 'women' as women_cats %}
-{% get_categories 'kids' as kids_cats %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,40 +35,20 @@
                         <li class="header__item"><a href="{% url 'about' %}" class="header__link">About </a></li>
                     </ul>
                 </nav>
-                <div class="header__user__links">
-                    <a href="{% url 'profile' %}" class="material-icons header__user__link">person</a>
+
                     <a href="{% url 'search' %}" class="material-icons header__user__link">search</a>
+                    {% if user.is_authenticated %}
+                        <p>Welcome, {{ user.username }}</p>
+                        <a href="{% url 'logout' %}" class="header__user__link">Logout</a>
+                        <a href="{% url 'profile' %}" class="material-icons header__user__link">person</a>
+                    {% else %}
+                        <a href="{% url 'login' %}" class="header__user__link">Login</a>
+                    {% endif %}
                     <div class="header__cart__wrap">
                         <a href="{% url 'cart' %}" class="material-icons header__user__link">shopping_cart</a>
                         <p id="ajax-qty">{{ carts_qty.total_qty }}</p>
                     </div>
-                </div>
             </div>
-
-            {% comment %} <ul class="nav__wrap">
-                <li><a href="{% url 'catalog' 'men' 'all' %}">Men</a>
-                    <ul>
-                        {% for men_cat in men_cats %}
-                        <li><a href="{% url 'catalog' men_cat.gender men_cat.slug %}">{{ men_cat.name }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </li>
-                <li><a href="{% url 'catalog' 'women' 'all' %}">Women</a>
-                    <ul>
-                        {% for women_cat in women_cats %}
-                        <li><a href="{% url 'catalog' women_cat.gender women_cat.slug %}">{{ women_cat.name }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </li>
-                <li><a href="{% url 'catalog' 'kids' 'all' %}">Kids</a>
-                    <ul>
-                        {% for kids_cat in kids_cats %}
-                        <li><a href="{% url 'catalog' kids_cat.gender kids_cat.slug %}">{{ kids_cat.name }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </li>
-                <li><a href="{% url 'catalog' 'sale' 'all' %}">Sale</a></li>
-            </ul>             {% endcomment %}
         </div>
     </header>
     {% block content %}

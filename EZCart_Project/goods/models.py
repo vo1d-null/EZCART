@@ -10,6 +10,7 @@ class Category(models.Model):
     gender = models.CharField(max_length=255, choices=(
         ('men', 'Men'),
         ('women', 'Women'),
+        ('kids', 'Kids'),
     ))
     image = models.ImageField(null=True, blank=True)
     slug = models.SlugField(max_length=255, unique=True)
