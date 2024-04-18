@@ -22,10 +22,10 @@
                 <div class="profile__info">
                     <div class="profile__name__update__wrap">
                         <p class="profile__name">{{ user.first_name }} {{ user.last_name }}</p>
-                        <a href="{% url 'update_profile' %}" class="material-icons profile__update__link">settings</a>
+                        <a href="{% url 'update_profile' %}" class="material-icons profile__update__link">Settings</a>
                     </div>
-                    <p class="profile__username">username: {{ user.username }}</p>
-                    <p class="profile__email">email: {{ user.email }}</p>
+                    <p class="profile__username">Username: {{ user.username }}</p>
+                    <p class="profile__email">Email: {{ user.email }}</p>
                 </div>
             </div>
             <hr>
@@ -35,7 +35,7 @@
                     <p class="profile__analytics__value">$ {{ orders.total_price }}</p>
                 </div>
                 <div class="profile__analytics__item">
-                    <p class="profile__analytics__text">Purchased sneakers:</p>
+                    <p class="profile__analytics__text">Purchases:</p>
                     <p class="profile__analytics__value">{{ orders.total_qty }}</p>
                 </div>
             </div>

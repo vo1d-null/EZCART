@@ -12,13 +12,13 @@
     <div class="container">
         <h2 class="main__title">{% block title %}Search...{% endblock %}</h2>
         <form method="get" class="form__search">
-            <input type="text" class="form__search__input" placeholder="Enter the sneaker name or article number..." name="q">
+            <input type="text" class="form__search__input" placeholder="Enter product name or article number..." name="q">
             <button type="submit" class="form__search__button">Search</button>
         </form>
         {% if not products %}
         <p class="nothing-found">Nothing was found</p>
         {% else %}
-        <p class="catalog__info__text">Quantity of Sneakers: <span class="catalog__info__qty">{{ products|length }}</span></p>    
+        <p class="catalog__info__text">Quantity of products : <span class="catalog__info__qty">{{ products|length }}</span></p>    
         <div class="catalog__wrap">
             {% for product in products %}
             <div class="catalog__card">

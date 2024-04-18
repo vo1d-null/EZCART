@@ -129,7 +129,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Asia/Yekaterinburg'
+TIME_ZONE = 'Europe/Sofia'
 
 USE_I18N = True
 

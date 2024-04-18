@@ -49,3 +49,5 @@ def search(request):
     else:
         products = None
     return render(request, 'goods/search.html', {'products': products})
+
+#TODO: Implement ProductItem

@@ -21,35 +21,35 @@
                     
                     <div class="swiper-slide">
                         <div class="swiper-content">
-                            <p class="swiper__title">The choice is yours</p>
-                            <p class="swiper__subtitle">Step into comfort</p>
-                            <a href="#" class="swiper__link">Choose sneakers</a>
+                            <p class="swiper__title">Don't Believe it ?</p>
+                            <p class="swiper__subtitle">Feel it! </p>
+                            <a href="#" class="swiper__link">See offers</a>
                         </div>
-                        <img src="{% static 'img/slides/first.jpg' %}" alt="">
+                        <img src="{% static 'img/slides/nike.webp' %}" alt="">
                     </div>
                     <div class="swiper-slide">
                         <div class="swiper-content">
-                            <p class="swiper__title">The choice is yours</p>
-                            <p class="swiper__subtitle">Step into comfort</p>
-                            <a href="#" class="swiper__link">Choose sneakers</a>
+                            <p class="swiper__title">Lightspeed Fast</p>
+                            <p class="swiper__subtitle">Light your way</p>
+                            <a href="#" class="swiper__link">See offers</a>
                         </div>
-                        <img src="{% static 'img/slides/second.webp' %}" alt="">
+                        <img src="{% static 'img/slides/adidas.webp' %}" alt="">
                     </div>
                     <div class="swiper-slide">
                         <div class="swiper-content">
-                            <p class="swiper__title">The choice is yours</p>
-                            <p class="swiper__subtitle">Step into comfort</p>
-                            <a href="#" class="swiper__link">Choose sneakers</a>
+                            <p class="swiper__title">Conquer yourself</p>
+                            <p class="swiper__subtitle">Leave a legacy behind</p>
+                            <a href="#" class="swiper__link">See offers</a>
                         </div>
-                        <img src="{% static 'img/slides/third.jpg' %}" alt="">
+                        <img src="{% static 'img/slides/everlast.webp' %}" alt="">
                     </div>
                     <div class="swiper-slide">
                         <div class="swiper-content">
-                            <p class="swiper__title">The choice is yours</p>
-                            <p class="swiper__subtitle">Step into comfort</p>
-                            <a href="#" class="swiper__link">Choose sneakers</a>
+                            <p class="swiper__title">New horizons</p>
+                            <p class="swiper__subtitle">Are you ready?</p>
+                            <a href="#" class="swiper__link">See offers</a>
                         </div>
-                        <img src="{% static 'img/slides/four.jpg' %}" alt="">
+                        <img src="{% static 'img/slides/northface.png' %}" alt="">
                     </div>
                 </div>
                 
@@ -63,22 +63,22 @@
             <div class="choice">
                 <div class="choice__wrap">
                     <a href="{% url 'categories' 'men' %}" class="choice__item">
-                        <img src="{% static 'img/main/man.jpg' %}" alt="">
-                        <span class="choice__text">Men</span>
+                        <img src="{% static 'img/main/men.webp' %}" alt="">
+                        <span class="choice__text">New Collection</span>
                     </a>
                     <a href="{% url 'categories' 'women' %}" class="choice__item">
-                        <img src="{% static 'img/main/woman.jpg' %}" alt="">
-                        <span class="choice__text">Women</span>
+                        <img src="{% static 'img/main/women.webp' %}" alt="">
+                        <span class="choice__text">New Collection</span>
                     </a>
                     <a href="{% url 'categories' 'kids' %}" class="choice__item">
-                        <img src="{% static 'img/main/kid.jpg' %}" alt="">
-                        <span class="choice__text">Kids</span>
+                        <img src="{% static 'img/main/kids.webp' %}" alt="">
+                        <span class="choice__text">New Collection</span>
                     </a>
                 </div>
             </div>
 
             <div class="fresh__wrap">
-                <h2 class="main__title">Fresh Out Sneakers</h2>
+                <h2 class="main__title">Featured Offers</h2>
                 <div class="owl-carousel owl-theme">
                     {% for product in products %}
                     <div class="catalog__card">

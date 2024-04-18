@@ -20,7 +20,7 @@
     <link rel="icon" href="{% static 'img/assets/favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'css/main_style.css' %}">
     {% block css %}{% endblock %}
-    <title>Sneaker World</title>
+    <title>EZCART</title>
 </head>
 
 <body>
@@ -28,17 +28,16 @@
         <div class="container">
             <div class="header__wrap">
                 <a href="{% url 'home' %}" class="header__logo">
-                    <span class="header__logo__title">
-                        Sneaker World 
-                    </span>
-                    <span class="material-icons header__logo__icon">public</span>
+                    <span class="material-icons header__logo__icon" >child_care</span>
+                    <span class="header__logo__title">EZCART</span>
+                    <span class="material-icons header__logo__icon" >shopping_cart</span>
                 </a>
                 <nav class="header__nav">
                     <ul class="header__list">
                         <li class="header__item"><a href="{% url 'categories' 'men' %}" class="header__link">Men</a></li>
                         <li class="header__item"><a href="{% url 'categories' 'women' %}" class="header__link">Women</a></li>
                         <li class="header__item"><a href="{% url 'categories' 'kids' %}" class="header__link">Kids</a></li>
-                        <li class="header__item"><a href="{% url 'about' %}" class="header__link">About Us</a></li>
+                        <li class="header__item"><a href="{% url 'about' %}" class="header__link">About </a></li>
                     </ul>
                 </nav>
                 <div class="header__user__links">
