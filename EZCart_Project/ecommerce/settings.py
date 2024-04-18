@@ -32,7 +32,7 @@ DEBUG = os.getenv('DEBUG')
 
 #ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS') for production
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1','prod-ezcart.up.railway.app']
+ALLOWED_HOSTS = ['localhost', '0.0.0.0','prod-ezcart.up.railway.app']
 
 
 # Application definition
