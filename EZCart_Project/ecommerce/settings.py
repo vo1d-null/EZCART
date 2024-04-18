@@ -32,7 +32,7 @@ DEBUG = os.getenv('DEBUG')
 
 #ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS') for production
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1','ezcart.up.railway.app']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1','prod-ezcart.up.railway.app']
 
 
 # Application definition
@@ -158,6 +158,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'users.User'
 LOGIN_URL = '/user/login/'
 
-CRSF_TRUSTED_ORIGINS = ['https://ezcart.up.railway.app']
+CRSF_TRUSTED_ORIGINS = ['prod-ezcart.up.railway.app']
 
 USE_THOUSAND_SEPARATOR = True
