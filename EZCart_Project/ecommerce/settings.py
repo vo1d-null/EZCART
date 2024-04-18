@@ -22,7 +22,7 @@ DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ['127.0.0.1','0.0.0.0','localhost','ezcartshop.up.railway.app']
 
-CRSF_TRUSTED_ORIGINS = ['https://ezcartshop.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://ezcartshop.up.railway.app']
 
 
 # Application definition
