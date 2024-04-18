@@ -1,6 +1,6 @@
 from django.urls import path
 from django.conf.urls.static import static 
-from EZCart_Project.ecommerce import settings 
+from ecommerce import settings 
 from . import views 
 
 
