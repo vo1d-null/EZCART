@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* REGISTER */
 
 .container_users {
@@ -18,8 +25,13 @@
 }
 
 .users__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 15px;
     margin-bottom: 15px;
 }
@@ -163,13 +175,19 @@
 }
 
 .checkout__form__choose {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 40px;
 }
 
 .checkout__form__choose-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 5px;
 }
 
@@ -180,7 +198,12 @@ input[type="radio"] {
 }
 
 #id_delivery_address {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 5px;
 }

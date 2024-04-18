@@ -1,9 +1,17 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 *,
 *::before,
 *::after {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 body {
@@ -14,10 +22,14 @@ body {
 a {
 	color: inherit;
 	text-decoration: none;
+	-webkit-transition: .4s;
+	-o-transition: .4s;
 	transition: .4s;
 }
 
 img {
+	-webkit-transition: .4s;
+	-o-transition: .4s;
 	transition: .4s;
 }
 
@@ -35,6 +47,8 @@ button {
 	font: inherit;
 	background-color: transparent;
 	cursor: pointer;
+	-webkit-transition: .4s;
+	-o-transition: .4s;
 	transition: .4s;
 }
 
@@ -63,9 +77,15 @@ span {
 /* HEADER */
 .header__logo {
 	display: block;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	width: 20%;
 }
 
@@ -75,9 +95,15 @@ span {
 }
 
 .header__wrap {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	padding: 20px 10px;
 	border-radius: 5px 5px 0 0;
 }
@@ -93,9 +119,15 @@ span {
 }
 
 .header__list {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	gap: 10px;
 	font-weight: 500;
 	font-size: 18px;
@@ -107,9 +139,15 @@ span {
 }
 
 .header__user__links {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	width: 10%;
 }
 
@@ -118,9 +156,15 @@ span {
 }
 
 .header__cart__wrap {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	gap: 5px;
 }
 
@@ -132,9 +176,15 @@ span {
 }
 
 .choice__wrap {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .choice__item {
@@ -185,11 +235,14 @@ span {
 
 .back-button {
 	color: #818181;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .back-button_icon {
 	font-size: 20px;
 }
-

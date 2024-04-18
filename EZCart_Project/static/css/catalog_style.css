@@ -1,6 +1,15 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .catalog__wrap {
     padding-bottom: 50px;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
 }
@@ -13,7 +22,8 @@
 .catalog__card__img {
     width: 100%;
     border-radius: 10px 10px 0 0;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     height: 80%;
 }
 
@@ -29,6 +39,8 @@
 
 .catalog__card__price__wrap {
     padding: 5px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 10px;
 }
@@ -50,8 +62,12 @@
 
 .catalog__card__button {
     display: inline-block;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border: 1px black solid;
     border-radius: 5px;
     padding: 5px;
@@ -73,7 +89,9 @@
 /* PAGINATION */
 .pagination__wrap {
     text-align: center;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 22px;
 }
 
@@ -89,8 +107,12 @@
 /* FILTERS */
 
 .catalog__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-bottom: 20px;
 
 }
