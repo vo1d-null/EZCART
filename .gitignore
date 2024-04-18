@@ -4,9 +4,7 @@ __pycache__/
 dj/
 venv/
 .env
-EZCart_Project/staticfiles
 db.sqlite3
-media
 
 cart_copy.html
 profile_copy.html
