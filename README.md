@@ -38,4 +38,4 @@ Password : password
 https://ezcartshop.up.railway.app/
 
 # Deployed on railway
-# Made with ❤️ by [@vo1d](https://github.com/vo1d)
+# Made with ❤️ by [@vo1d](https://github.com/vo1d-null)
