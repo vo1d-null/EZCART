@@ -37,3 +37,4 @@ Password : password
 
 https://ezcartshop.up.railway.app/
 
+# Deployed on railway
