@@ -4,18 +4,6 @@
 
 # Installation
 
-`git clone https://github.com/vo1d-null/EZCART.git`
-
-`cd EZCart_Project`
-
-`dj/Scripts/activate`
-
-`python manage.py makemigrations`
-
-`python manage.py migrate`
-
-# If that does not work delete dj folder and try :
-
 `python -m venv env`
 
 `env\Scripts\activate`
@@ -47,6 +35,5 @@ Password : password
 ```
 # Demo
 
-https://ezcart.up.railway.app/
+https://ezcartshop.up.railway.app/
 
-# HTML Template
