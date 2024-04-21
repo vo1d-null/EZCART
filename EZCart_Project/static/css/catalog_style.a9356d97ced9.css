@@ -1,0 +1,139 @@
+.catalog__wrap {
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.catalog__card {
+    border: 1px #d2d6d2 solid;
+    border-radius: 10px;
+}
+
+.catalog__card__img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+    height: 80%;
+}
+
+.catalog__card__info {
+    padding: 10px;
+    height: 20%;
+}
+
+.catalog__card__name {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.catalog__card__price__wrap {
+    padding: 5px 0;
+    display: flex;
+    gap: 10px;
+}
+
+/* if sale */
+.catalog__card__price_new {
+    font-weight: 500;
+    color: #e61515;
+}
+
+.catalog__card__price_old {
+    text-decoration: line-through;
+}
+
+/* if not sale */
+.catalog__card__price {
+    font-weight: 500;
+}
+
+.catalog__card__button {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.catalog__card__button__add {
+    font-size: 13px;
+}
+
+.catalog__card__button__icon {
+    font-size: 17px;
+}
+
+.catalog__card__button:hover {
+    color: #fff;
+    background-color: #333;
+}
+
+/* PAGINATION */
+.pagination__wrap {
+    text-align: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+.disabled {
+    cursor: default;
+    color: #787878;
+}
+
+.pagination__button {
+    font-size: 15px;
+}
+
+/* FILTERS */
+
+.catalog__info {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+
+}
+
+.catalog__info__text {
+    padding-bottom: 20px;
+}
+
+.catalog__info__qty {
+    font-weight: 500;
+}
+
+.dropdown__wrap {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown__title {
+    cursor: default;
+    font-size: 18px;
+}
+.dropdown {
+    position: absolute;
+    left: 0;
+    width: 150px;
+    background-color: #333;
+    color: #fff;
+    display: none;
+}
+
+.dropdown li:hover {
+    color: #333;
+    background-color: #fff;
+}
+
+.dropdown li a {
+    display: block;
+}
+
+.dropdown li {
+    width: 100%;;
+}
+
+.dropdown__wrap:hover > ul {
+    display: initial;
+}
