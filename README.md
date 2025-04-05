@@ -1,6 +1,6 @@
 # EZCart
 
-## A SportDepot mockup project
+## Eccomrce web platform
 
 # Installation
 
