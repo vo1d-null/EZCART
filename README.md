@@ -1,6 +1,6 @@
 # EZCart
 
-## Eccomrce web platform
+## Eccomerce web platform
 
 # Installation
 
